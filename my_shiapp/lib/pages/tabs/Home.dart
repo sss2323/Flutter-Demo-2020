@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
                 //     MaterialPageRoute(builder: (context) => SearchPage()));
 
                 //命名路由:实现对路由统一管理
-                Navigator.pushNamed(context, '/search');
+                Navigator.pushNamed(context, '/search', arguments: {"id": 123});
               }),
           SizedBox(
             height: 20,
