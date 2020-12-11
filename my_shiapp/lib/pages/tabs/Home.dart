@@ -32,6 +32,11 @@ class _HomePageState extends State<HomePage> {
               child: Text('跳转到表单页面并传值'),
               onPressed: () {
                 Navigator.pushNamed(context, '/form');
+              }),
+          RaisedButton(
+              child: Text('跳转到商品页面'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/product');
               })
         ],
       ),
