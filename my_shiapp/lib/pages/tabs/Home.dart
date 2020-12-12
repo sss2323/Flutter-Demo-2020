@@ -12,11 +12,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
+        child: Center(
       child: Column(
         children: [
+          SizedBox(
+            height: 30,
+          ),
           Text('我是首页王子'),
           RaisedButton(
               child: Text('点我就转到搜索页面'),
+              color: Theme.of(context).accentColor,
+              textTheme: ButtonTextTheme.primary,
               onPressed: () {
                 //普通路由
                 // Navigator.of(context).push(
@@ -29,17 +35,24 @@ class _HomePageState extends State<HomePage> {
             height: 20,
           ),
           RaisedButton(
-              child: Text('跳转到表单页面并传值'),
+              child: Text('跳转到表单页'),
+              color: Theme.of(context).accentColor,
+              textTheme: ButtonTextTheme.primary,
               onPressed: () {
                 Navigator.pushNamed(context, '/form');
               }),
+          SizedBox(
+            height: 30,
+          ),
           RaisedButton(
               child: Text('跳转到商品页面'),
+              color: Theme.of(context).accentColor,
+              textTheme: ButtonTextTheme.primary,
               onPressed: () {
                 Navigator.pushNamed(context, '/product');
               })
         ],
       ),
-    );
+    ));
   }
 }

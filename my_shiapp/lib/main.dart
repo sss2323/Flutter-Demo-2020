@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         //   '/form': (context) => FormPage(),
         //   '/search': (context) => SearchPage(),
         // },
-        initialRoute: '/',
+        initialRoute: '/', //初始化要加载的路由
         onGenerateRoute: onGenerateRoute);
   }
 }
