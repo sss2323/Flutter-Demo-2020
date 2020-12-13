@@ -9,6 +9,8 @@ import '../pages/user/RegisterFirst.dart';
 import '../pages/user/RegisterSecond.dart';
 import '../pages/user/RegisterThird.dart';
 
+import '../pages/AppBarDemo.dart';
+
 //配置路由
 final routes = {
   //常量
@@ -22,7 +24,9 @@ final routes = {
   '/login': (context) => LoginPage(),
   '/registerFirst': (context) => RegisterFirstPage(),
   '/registerSecond': (context) => RegisterSecondPage(),
-  '/registerThird': (context) => RegisterThirdPage()
+  '/registerThird': (context) => RegisterThirdPage(),
+
+  '/appBarDemo': (context) => AppBarDemoPage()
 };
 
 //固定写法

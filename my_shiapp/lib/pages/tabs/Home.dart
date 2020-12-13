@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, '/form');
               }),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
           RaisedButton(
               child: Text('跳转到商品页面'),
@@ -50,7 +50,23 @@ class _HomePageState extends State<HomePage> {
               textTheme: ButtonTextTheme.primary,
               onPressed: () {
                 Navigator.pushNamed(context, '/product');
-              })
+              }),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RaisedButton(
+                  child: Text('跳转到appbar'),
+                  color: Theme.of(context).primaryColor,
+                  textTheme: ButtonTextTheme.primary,
+                  onPressed: () {
+                    //路由跳转
+                    Navigator.pushNamed(context, '/appBarDemo');
+                  })
+            ],
+          )
         ],
       ),
     ));

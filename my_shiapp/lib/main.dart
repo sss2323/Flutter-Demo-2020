@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
+        debugShowCheckedModeBanner: false, //去掉debug图标
         home: Tabs(),
         theme: ThemeData(primaryColor: Colors.redAccent),
         //命名路由
