@@ -66,7 +66,17 @@ class _HomePageState extends State<HomePage> {
                     Navigator.pushNamed(context, '/appBarDemo');
                   })
             ],
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          RaisedButton(
+              child: Text('TabController定义顶部tab 切换'),
+              color: Theme.of(context).accentColor,
+              textTheme: ButtonTextTheme.primary,
+              onPressed: () {
+                Navigator.pushNamed(context, '/tabBarController');
+              }),
         ],
       ),
     ));
