@@ -14,6 +14,8 @@ import '../pages/TabBarController.dart';
 
 import '../pages/User.dart';
 
+import '../pages/ButtonPage.dart';
+
 //配置路由
 final routes = {
   //常量
@@ -31,7 +33,8 @@ final routes = {
 
   '/appBarDemo': (context) => AppBarDemoPage(),
   '/tabBarController': (context) => TabBarControllerPage(),
-  '/user': (context) => UserPage()
+  '/user': (context) => UserPage(),
+  '/buttonPage': (context) => ButtonPage()
 };
 
 //固定写法
