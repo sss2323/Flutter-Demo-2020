@@ -51,6 +51,86 @@ class _TabsState extends State<Tabs> {
           // BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text('设置'))
         ],
       ),
+      //侧边栏  2，侧边栏路由跳转
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: DrawerHeader(
+                    child: Text('你好，小可爱'),
+                    decoration: BoxDecoration(
+                        // color: Colors.blue
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                "https://www.itying.com/images/flutter/4.png"),
+                            fit: BoxFit.cover)),
+                  ),
+                ),
+              ],
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.home),
+              ),
+              title: Text('我的空间'),
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.people),
+              ),
+              title: (Text('用户中心')),
+              onTap: () {
+                Navigator.of(context).pop(); //隐藏侧边栏
+                Navigator.pushNamed(context, '/user');
+              },
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.people),
+              ),
+              title: (Text('设置中心')),
+            )
+          ],
+        ),
+      ),
+      endDrawer: Drawer(
+          //右侧侧边栏
+          child: Column(
+        children: [
+          Center(
+            child: Row(
+              children: [
+                Expanded(
+                  child: UserAccountsDrawerHeader(
+                    accountName: Text('一一在学习呀'),
+                    accountEmail: Text('123@qq.com'),
+                    currentAccountPicture: CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          "https://www.itying.com/images/flutter/4.png"),
+                    ),
+                    decoration: BoxDecoration(
+                        color: Colors.pink,
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                "https://www.itying.com/images/flutter/1.png"),
+                            fit: BoxFit.cover)),
+                    otherAccountsPictures: [
+                      Image.network(
+                          "https://www.itying.com/images/flutter/2.png"),
+                      Image.network(
+                          "https://www.itying.com/images/flutter/3.png")
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      )),
     );
   }
 }
