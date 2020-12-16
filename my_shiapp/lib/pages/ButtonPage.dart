@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ButtonPage extends StatelessWidget {
@@ -12,6 +13,18 @@ class ButtonPage extends StatelessWidget {
           IconButton(icon: Icon(Icons.ac_unit), onPressed: () {}),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.add,
+          color: Colors.black,
+          size: 35,
+        ),
+        onPressed: () {
+          print('floatingactionbutton');
+        },
+        backgroundColor: Colors.red,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

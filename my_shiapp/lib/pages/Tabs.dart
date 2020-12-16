@@ -26,6 +26,28 @@ class _TabsState extends State<Tabs> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(' 粉色小星球hi')),
+      floatingActionButton: Container(
+        height: 80,
+        width: 80,
+        padding: EdgeInsets.all(8),
+        margin: EdgeInsets.only(top: 10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: Colors.white,
+        ),
+        child: FloatingActionButton(
+          //浮动按钮
+          child: Icon(Icons.add),
+          onPressed: () {
+            print('floatingactionbutton tabs');
+            setState(() {
+              this._currentIndex = 1;
+            });
+          },
+          backgroundColor: this._currentIndex == 1 ? Colors.red : Colors.orange,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: this._pageList[this._currentIndex], //配置对应索引值选中
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex,
@@ -37,14 +59,18 @@ class _TabsState extends State<Tabs> {
         },
         iconSize: 36.0, //icon 的大小
         fixedColor: Colors.red, //选中的颜色
-        // type: BottomNavigationBarType.fixed, //配置底部tabs可以有多个按钮
+        type: BottomNavigationBarType.fixed, //配置底部tabs可以有多个按钮
         items: [
           // ignore: deprecated_member_use
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('首页')),
+
+          // BottomNavigationBarItem(icon: Icon(Icons.message), title: Text('消息')),
           // ignore: deprecated_member_use
           BottomNavigationBarItem(
               icon: Icon(Icons.category), title: Text('分类')),
           // ignore: deprecated_member_use
+          // BottomNavigationBarItem(icon: Icon(Icons.share), title: Text('分享')),
+
           BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text('设置'))
           // BottomNavigationBarItem(
           //     icon: Icon(Icons.settings), title: Text('设置')),
