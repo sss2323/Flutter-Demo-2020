@@ -15,6 +15,9 @@ import '../pages/TabBarController.dart';
 import '../pages/User.dart';
 
 import '../pages/ButtonPage.dart';
+import '../pages/TextField.dart';
+
+import '../pages/FormDemo.dart';
 
 //配置路由
 final routes = {
@@ -34,7 +37,9 @@ final routes = {
   '/appBarDemo': (context) => AppBarDemoPage(),
   '/tabBarController': (context) => TabBarControllerPage(),
   '/user': (context) => UserPage(),
-  '/buttonPage': (context) => ButtonPage()
+  '/buttonPage': (context) => ButtonPage(),
+  '/textField': (context) => TextFieldDemoPage(),
+  '/formDemo': (context) => FormDemoPage()
 };
 
 //固定写法

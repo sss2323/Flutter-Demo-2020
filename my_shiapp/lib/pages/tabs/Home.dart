@@ -87,6 +87,23 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.pushNamed(context, '/buttonPage');
               }),
+          SizedBox(
+            height: 20,
+          ),
+          RaisedButton(
+              child: Text('表单示例'),
+              color: Theme.of(context).accentColor,
+              textTheme: ButtonTextTheme.primary,
+              onPressed: () {
+                Navigator.pushNamed(context, '/textField');
+              }),
+          RaisedButton(
+              child: Text('学生登记'),
+              color: Theme.of(context).accentColor,
+              textTheme: ButtonTextTheme.primary,
+              onPressed: () {
+                Navigator.pushNamed(context, '/formDemo');
+              }),
         ],
       ),
     ));
