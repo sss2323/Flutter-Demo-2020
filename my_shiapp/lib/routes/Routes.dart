@@ -18,6 +18,8 @@ import '../pages/ButtonPage.dart';
 import '../pages/TextField.dart';
 
 import '../pages/FormDemo.dart';
+import '../pages/DatePicker.dart';
+import '../pages/DatePickerPub.dart';
 
 //配置路由
 final routes = {
@@ -39,7 +41,9 @@ final routes = {
   '/user': (context) => UserPage(),
   '/buttonPage': (context) => ButtonPage(),
   '/textField': (context) => TextFieldDemoPage(),
-  '/formDemo': (context) => FormDemoPage()
+  '/formDemo': (context) => FormDemoPage(),
+  '/datePicker': (context) => DatePickerDemo(),
+  '/datePickerPub': (context) => DatePickerPubDemo()
 };
 
 //固定写法
