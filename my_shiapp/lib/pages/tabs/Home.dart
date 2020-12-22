@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                       color: Theme.of(context).accentColor,
                       textTheme: ButtonTextTheme.primary,
                       onPressed: () {
-                        Navigator.pushNamed(context, '/datePicker');
+                        Navigator.pushNamed(context, '/datePickerPub');
                       }),
                 ],
               ),
