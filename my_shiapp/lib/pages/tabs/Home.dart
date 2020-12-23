@@ -142,11 +142,11 @@ class _HomePageState extends State<HomePage> {
                     height: 20,
                   ),
                   RaisedButton(
-                      child: Text('日期三方插件'),
+                      child: Text('dialog'),
                       color: Theme.of(context).accentColor,
                       textTheme: ButtonTextTheme.primary,
                       onPressed: () {
-                        Navigator.pushNamed(context, '/datePickerPub');
+                        Navigator.pushNamed(context, '/dialog');
                       }),
                 ],
               ),

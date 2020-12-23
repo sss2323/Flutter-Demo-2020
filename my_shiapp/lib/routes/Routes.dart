@@ -21,6 +21,7 @@ import '../pages/FormDemo.dart';
 import '../pages/DatePicker.dart';
 import '../pages/DatePickerPub.dart';
 import '../pages/swiperDemo.dart';
+import '../pages/Dialog.dart';
 
 //配置路由
 final routes = {
@@ -45,7 +46,8 @@ final routes = {
   '/formDemo': (context) => FormDemoPage(),
   '/datePicker': (context) => DatePickerDemo(),
   '/datePickerPub': (context) => DatePickerPubDemo(),
-  '/swiperDemo': (context) => SwiperDemoPage()
+  '/swiperDemo': (context) => SwiperDemoPage(),
+  '/dialog': (context) => DialogDomePage()
 };
 
 //固定写法
