@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_swiper: ^1.1.6 
   localization: ^0.1.0
 
   date_format: ^1.0.9

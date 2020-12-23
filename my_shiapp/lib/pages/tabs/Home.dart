@@ -128,6 +128,26 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () {
                         Navigator.pushNamed(context, '/datePickerPub');
                       }),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  RaisedButton(
+                      child: Text('轮播图swiper'),
+                      color: Theme.of(context).accentColor,
+                      textTheme: ButtonTextTheme.primary,
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/swiperDemo');
+                      }),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  RaisedButton(
+                      child: Text('日期三方插件'),
+                      color: Theme.of(context).accentColor,
+                      textTheme: ButtonTextTheme.primary,
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/datePickerPub');
+                      }),
                 ],
               ),
             ),
