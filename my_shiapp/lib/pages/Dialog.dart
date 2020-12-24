@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:dialog/dialog.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import '../components/MyDialog.dart';
 
 class DialogDomePage extends StatefulWidget {
   DialogDomePage({Key key}) : super(key: key);
@@ -106,6 +106,7 @@ class _DialogDomePageState extends State<DialogDomePage> {
   }
 
   _toast() {
+    //第三方弹框
     Fluttertoast.showToast(
         msg: "提示信息",
         toastLength: Toast.LENGTH_SHORT,
@@ -148,6 +149,22 @@ class _DialogDomePageState extends State<DialogDomePage> {
               RaisedButton(
                 onPressed: _toast,
                 child: Text('toast --fluttertoast第三方库'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              RaisedButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return MyDialog(
+                          title: "关于我们",
+                          content: "内容",
+                        );
+                      });
+                },
+                child: Text('自定义Dialog'),
               )
             ],
           ),
